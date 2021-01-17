@@ -35,3 +35,7 @@ variable "versioning_enabled" {
   default = true
 }
 
+variable "content" {
+  type = string
+}
+

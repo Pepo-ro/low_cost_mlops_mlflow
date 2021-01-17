@@ -25,11 +25,13 @@ resource "google_storage_bucket" "ml_bucket" {
 }
 
 resource "google_storage_bucket_object" "artifacts" {
-  name   = "artifacts/"
-  bucket = google_storage_bucket.ml_bucket.name
+  name    = "artifacts/"
+  bucket  = google_storage_bucket.ml_bucket.name
+  content = var.content
 }
 
 resource "google_storage_bucket_object" "mlruns" {
-  name   = "mlruns/"
-  bucket = google_storage_bucket.ml_bucket.name
+  name    = "mlruns/"
+  bucket  = google_storage_bucket.ml_bucket.name
+  content = var.content
 }
