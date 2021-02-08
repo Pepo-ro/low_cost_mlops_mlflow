@@ -1,0 +1,17 @@
+training_inputs:
+       scaleTier : 'BASIC_GPU'
+       packageUris : [null]
+       pythonModule : 'trainer.task'
+       region : 'us-central1'
+       jobDir : null
+       runtimeVersion : '2.2'
+       pythonVersion : '3.7'
+       args :
+              --data-dir : null
+              --num-train-examples : 60000000
+              --num-eval-examples : 50000
+              --num-evals : 100
+              --learning-rate : 0.0001
+
+trainerFileName : 'trainer-0.0.0.tar.gz'
+modeName : 'sample'
