@@ -13,5 +13,6 @@ training_inputs:
               --num-evals : 100
               --learning-rate : 0.0001
 
+versionName : 'v0'
 trainerFileName : 'trainer-0.0.0.tar.gz'
 modeName : 'sample'
