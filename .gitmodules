@@ -1,0 +1,3 @@
+[submodule "IaC/modules/postgresql"]
+	path = IaC/modules/postgresql
+	url = git@github.com:terraform-google-modules/terraform-google-sql-db.git
