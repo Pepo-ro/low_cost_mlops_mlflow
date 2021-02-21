@@ -1,4 +1,3 @@
-  
 module "db" {
   source           = "./modules/postgresql"
   db_name          = var.db_name
