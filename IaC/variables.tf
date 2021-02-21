@@ -1,4 +1,3 @@
-
 variable "project" {
   type = string
 }
@@ -39,3 +38,13 @@ variable "content" {
   type = string
 }
 
+# db params
+variable "db_name"{
+  type = string
+  default = "default"
+}
+
+variable "database_version" {
+  type = string
+  default = "POSTGRES_12"
+}
