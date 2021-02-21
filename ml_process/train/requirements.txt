@@ -3,4 +3,5 @@ GitPython
 google_apitools
 google-api-python-client
 gunicorn
+pyyaml
 six>=1.13.0,<2dev
