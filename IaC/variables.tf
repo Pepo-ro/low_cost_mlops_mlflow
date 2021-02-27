@@ -39,12 +39,23 @@ variable "content" {
 }
 
 # db params
-variable "db_name"{
-  type = string
+variable "db_name" {
+  type    = string
   default = "default"
 }
 
 variable "database_version" {
-  type = string
+  type    = string
   default = "POSTGRES_12"
+}
+
+variable "ip_configuration" {
+  default = {
+    ipv4_enabled        = false
+    authorized_networks = []
+    require_ssl         = true
+    private_network     = google_compute_network.private_network.self_link
+  }
+
+
 }
