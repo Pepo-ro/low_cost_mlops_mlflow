@@ -14,7 +14,17 @@ variable "zone" {
   type = string
 }
 
-# GCS 設定
+variable "private_network_connector_name" {
+  type    = string
+  default = "private-network-connector"
+}
+
+variable "ip_cidr_range" {
+  type    = string
+  default = "10.8.0.0/28"
+}
+
+# GCS params
 variable "bucket_name" {
   type = string
 }
@@ -54,8 +64,16 @@ variable "ip_configuration" {
     ipv4_enabled        = false
     authorized_networks = []
     require_ssl         = true
-    private_network     = google_compute_network.private_network.self_link
+    private_network     = ""
   }
+}
 
+variable "db_password" {
+  type    = string
+  default = ""
+}
 
+variable "db_user_name" {
+  type    = string
+  default = "default"
 }
